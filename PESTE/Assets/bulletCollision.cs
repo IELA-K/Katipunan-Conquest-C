@@ -15,4 +15,9 @@ public class bulletCollision : MonoBehaviour
     {
         
     }
+
+    void OnCollisionEnter2D(Collision2D Col)
+    {
+        Destroy(this.gameObject);
+    }
 }

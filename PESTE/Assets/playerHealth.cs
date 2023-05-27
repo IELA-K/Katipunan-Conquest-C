@@ -8,6 +8,9 @@ public class playerHealth : MonoBehaviour
     public float health;
     public float maxHealth;
     public Image healthBar;
+    public Transform respawnPoint;
+    public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +21,11 @@ public class playerHealth : MonoBehaviour
     void Update()
     {
         healthBar.fillAmount = Mathf.Clamp(health / maxHealth, 0, 1);
+
+        if(health <= 0)
+        {
+            player.transform.position = respawnPoint.position;
+            health = maxHealth;
+        }
     }
 }

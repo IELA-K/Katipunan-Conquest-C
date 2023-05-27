@@ -57,10 +57,7 @@ public class turretScript : MonoBehaviour
                 shoot();
             }
         }
-        else
-        {
-            Gun.transform.up = Vector2.zero;
-        }
+       
     }
     void shoot()
     {
