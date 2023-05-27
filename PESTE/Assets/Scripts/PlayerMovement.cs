@@ -51,6 +51,10 @@ public class PlayerMovement : MonoBehaviour
         {
             Flip();
         }
+        if (gameObject.GetComponent<playerHealth>().health <= 0)
+        {
+            rb.velocity = Vector2.zero;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
