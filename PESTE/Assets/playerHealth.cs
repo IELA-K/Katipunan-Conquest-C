@@ -28,6 +28,7 @@ public class playerHealth : MonoBehaviour
         if (health <= 0 || player.transform.position.y < -5 && !isDead) // Check if player falls below a certain height (e.g., -10)
         {
             isDead = true;
+            gameObject.SetActive(false);
             gameManager.gameOver();
             Debug.Log("Dead");
         }
