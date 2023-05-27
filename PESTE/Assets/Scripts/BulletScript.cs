@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
+    public playerHealth pHealth;
+    public float damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,12 @@ public class BulletScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D Col)
     {
-        Destroy(this.gameObject);
+        
+
+        if (Col.gameObject.CompareTag("Player"))
+        {
+            Col.gameObject.GetComponent<playerHealth>().health -= 20;
+            Destroy(gameObject);
+        }
     }
 }
