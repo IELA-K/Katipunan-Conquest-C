@@ -2773,9 +2773,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1034259914}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bba9188ad73460848a1f1d28479e0ddb, type: 3}
+  m_Script: {fileID: 11500000, guid: 470e745f99abbf44fa6a6ba2cfda11bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hearts:
+  - {fileID: 1895621357}
+  - {fileID: 1737461410}
+  - {fileID: 1498845995}
+  fullHeart: {fileID: 21300000, guid: 1b55690c31ca7764e852ac9c3a410b7a, type: 3}
+  emptyHeart: {fileID: 21300000, guid: 421949ba9ec15a345a2e23238bd2b582, type: 3}
 --- !u!1 &1069409369
 GameObject:
   m_ObjectHideFlags: 0
