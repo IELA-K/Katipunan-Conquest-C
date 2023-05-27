@@ -2695,6 +2695,7 @@ GameObject:
   - component: {fileID: 1034259915}
   - component: {fileID: 1034259917}
   - component: {fileID: 1034259916}
+  - component: {fileID: 1034259918}
   m_Layer: 5
   m_Name: HealthHeart
   m_TagString: Untagged
@@ -2763,6 +2764,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034259914}
   m_CullTransparentMesh: 1
+--- !u!114 &1034259918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034259914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bba9188ad73460848a1f1d28479e0ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1069409369
 GameObject:
   m_ObjectHideFlags: 0
@@ -2936,6 +2949,7 @@ MonoBehaviour:
   speed: 5
   jump: 700
   isFacingRight: 0
+  canJump: 0
 --- !u!61 &1351383628
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3343,7 +3357,7 @@ GameObject:
   - component: {fileID: 1498845996}
   - component: {fileID: 1498845995}
   m_Layer: 5
-  m_Name: Heart (2)
+  m_Name: heartcontainer3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3530,6 +3544,7 @@ MonoBehaviour:
   speed: 8
   jump: 0
   isFacingRight: 1
+  canJump: 0
 --- !u!61 &1615307823
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3820,7 +3835,7 @@ GameObject:
   - component: {fileID: 1737461411}
   - component: {fileID: 1737461410}
   m_Layer: 5
-  m_Name: Heart (1)
+  m_Name: heartcontainer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4122,7 +4137,7 @@ GameObject:
   - component: {fileID: 1895621358}
   - component: {fileID: 1895621357}
   m_Layer: 5
-  m_Name: Heart
+  m_Name: heartcontainer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
