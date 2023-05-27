@@ -22,10 +22,15 @@ public class playerHealth : MonoBehaviour
     {
         healthBar.fillAmount = Mathf.Clamp(health / maxHealth, 0, 1);
 
-        if(health <= 0)
+        if (health <= 0 || player.transform.position.y < -5) // Check if player falls below a certain height (e.g., -10)
         {
-            player.transform.position = respawnPoint.position;
-            health = maxHealth;
+            RespawnPlayer();
         }
+    }
+
+    void RespawnPlayer()
+    {
+        player.transform.position = respawnPoint.position;
+        health = maxHealth;
     }
 }
