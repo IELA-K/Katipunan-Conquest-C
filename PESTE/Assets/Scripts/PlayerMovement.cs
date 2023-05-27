@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public float jump;
     public bool isFacingRight;
+    public bool canJump;
 
     void Start()
     {
@@ -19,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -27,12 +28,13 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(Move * speed, rb.velocity.y);
 
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && canJump)
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump));
+            canJump = false;
         }
 
-        if(Move >= 0.1f || Move <= -0.1f)
+        if (Move >= 0.1f || Move <= -0.1f)
         {
             anim.SetBool("isRunning", true);
         }
@@ -41,11 +43,11 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("isRunning", false);
         }
 
-        if(!isFacingRight && Move > 0f)
+        if (!isFacingRight && Move > 0f)
         {
             Flip();
         }
-        else if(isFacingRight && Move< 0f)
+        else if (isFacingRight && Move < 0f)
         {
             Flip();
         }
@@ -56,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             anim.SetBool("isJumping", false);
+            canJump = true;
         }
     }
 
@@ -67,16 +70,16 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-   
+
 
     private void Flip()
     {
-       
-        
-            isFacingRight = !isFacingRight;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
-        
+
+
+        isFacingRight = !isFacingRight;
+        Vector3 localScale = transform.localScale;
+        localScale.x *= -1f;
+        transform.localScale = localScale;
+
     }
 }
