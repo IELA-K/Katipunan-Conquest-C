@@ -1056,7 +1056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Range: 5
-  Target: {fileID: 1615307826}
+  Target: {fileID: 1351383631}
   AlarmLight: {fileID: 452496354}
   Gun: {fileID: 1472702443}
   bullet: {fileID: 5565424960403610543, guid: 98e517717e8cf5449ad0009333151cfd, type: 3}
