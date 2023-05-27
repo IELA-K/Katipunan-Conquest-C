@@ -11,6 +11,9 @@ public class playerHealth : MonoBehaviour
     public Transform respawnPoint;
     public GameObject player;
 
+    private bool isDead;
+    public GameManagerScript gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +25,13 @@ public class playerHealth : MonoBehaviour
     {
         healthBar.fillAmount = Mathf.Clamp(health / maxHealth, 0, 1);
 
-        if (health <= 0 || player.transform.position.y < -5) // Check if player falls below a certain height (e.g., -10)
+        if (health <= 0 || player.transform.position.y < -5 && !isDead) // Check if player falls below a certain height (e.g., -10)
         {
-            RespawnPlayer();
+            isDead = true;
+            gameManager.gameOver();
+            Debug.Log("Dead");
         }
+
     }
 
     void RespawnPlayer()
