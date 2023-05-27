@@ -2772,6 +2772,7 @@ GameObject:
   - component: {fileID: 1034259915}
   - component: {fileID: 1034259917}
   - component: {fileID: 1034259916}
+  - component: {fileID: 1034259918}
   m_Layer: 5
   m_Name: HealthHeart
   m_TagString: Untagged
@@ -2840,6 +2841,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034259914}
   m_CullTransparentMesh: 1
+--- !u!114 &1034259918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034259914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 470e745f99abbf44fa6a6ba2cfda11bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hearts:
+  - {fileID: 1895621357}
+  - {fileID: 1737461410}
+  - {fileID: 1498845995}
+  fullHeart: {fileID: 21300000, guid: 1b55690c31ca7764e852ac9c3a410b7a, type: 3}
+  emptyHeart: {fileID: 21300000, guid: 421949ba9ec15a345a2e23238bd2b582, type: 3}
 --- !u!1 &1069409369
 GameObject:
   m_ObjectHideFlags: 0
@@ -3437,7 +3456,7 @@ GameObject:
   - component: {fileID: 1498845996}
   - component: {fileID: 1498845995}
   m_Layer: 5
-  m_Name: Heart (2)
+  m_Name: heartcontainer3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3915,7 +3934,7 @@ GameObject:
   - component: {fileID: 1737461411}
   - component: {fileID: 1737461410}
   m_Layer: 5
-  m_Name: Heart (1)
+  m_Name: heartcontainer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4217,7 +4236,7 @@ GameObject:
   - component: {fileID: 1895621358}
   - component: {fileID: 1895621357}
   m_Layer: 5
-  m_Name: Heart
+  m_Name: heartcontainer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
