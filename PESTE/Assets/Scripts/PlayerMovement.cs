@@ -51,10 +51,12 @@ public class PlayerMovement : MonoBehaviour
         {
             Flip();
         }
+
         if (gameObject.GetComponent<playerHealth>().health <= 0)
         {
             rb.velocity = Vector2.zero;
         }
+
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -63,6 +65,12 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetBool("isJumping", false);
             canJump = true;
+        }
+
+        if (other.gameObject.CompareTag("Win"))
+        {
+            rb.velocity = Vector2.zero;
+            canJump = false;
         }
     }
 

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class FinishLine : MonoBehaviour
 {
- 
+    public GameManagerScript gameManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,7 @@ public class FinishLine : MonoBehaviour
     { 
         if(collision.tag == "Player")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            gameManager.gameOver();
         }
     }
 }
