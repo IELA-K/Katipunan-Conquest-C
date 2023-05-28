@@ -23,6 +23,11 @@ public class GameManagerScript : MonoBehaviour
         gameOverUI.SetActive(true);
     }
 
+    public void victory()
+    {
+        gameOverUI.SetActive(true);
+    }
+
     public void restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
