@@ -2595,6 +2595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1237826178}
+  player: {fileID: 1351383625}
 --- !u!61 &1109332487
 BoxCollider2D:
   m_ObjectHideFlags: 0
